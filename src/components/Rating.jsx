@@ -8,7 +8,7 @@ const Rating = ({ number }) => {
         return (
           <StarIcon
             key={i}
-            className={number > i ? "fill-black" : "fill-white"}
+            className={number > i ? "fill-white text-white" : "text-white"}
           />
         );
       })}

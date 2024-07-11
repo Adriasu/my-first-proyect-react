@@ -1,7 +1,7 @@
 import React from "react";
 import CreditCard from "./components/CreditCard";
-import Rating from "./components/Rating";
 import dataCreditCardJSON from "./data/dataCreditCart.json";
+import UserCard from "./components/UserCard";
 
 const App = () => {
   return (
@@ -23,6 +23,17 @@ const App = () => {
           );
         })}
       </div>
+      <p className="m-auto p-10">EJERCICIO 2</p>
+      <div className="flex">
+      <UserCard/>
+
+      </div>
+
+     
+
+
+
+
     </div>
   );
 };
