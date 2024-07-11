@@ -1,61 +1,51 @@
 import React from "react";
 
-const CreditCard = () => {
-  const creditCards = [
-    {
-      type: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png",
-      number: "1236478512548845",
-      expirationMonth: 11,
-      expirationYear: 26,
-      bank: "BBVA",
-      owner: "Maxence Bouret",
-      cssClass: "h-40 w-72 bg-green-400 rounded-2xl text-white flex flex-col",
-    },
-    {
-      type: "https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg",
-      number: "1236478512540995",
-      expirationMonth: 10,
-      expirationYear: 28,
-      bank: "N26",
-      owner: "Adriana Suárez",
-      cssClass: "h-40 w-72 bg-gray-400 rounded-2xl text-black flex flex-col",
-    },
-    {
-      type: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png",
-      number: "1236478512546984",
-      expirationMonth: 12,
-      expirationYear: 25,
-      bank: "Revolut",
-      owner: "Max Beltran",
-      cssClass: "h-40 w-72 bg-yellow-500 rounded-2xl text-white flex flex-col",
-    },
-  ];
+const CreditCard = ({
+  type,
+  number,
+  expirationMonth,
+  expirationYear,
+  bank,
+  owner,
+  cssClass,
+}) => {
+  const backGroundColor = () => {
+    switch (cssClass) {
+      case "green":
+        return "bg-[#4ca698] text-white";
+
+      case "gray":
+        return "bg-[#ededed] text-black";
+
+      case "gold":
+        return "bg-[#d9bc66] text-white";
+      default:
+        return "bg-[#edf0f7] text-bla";
+    }
+  };
+
+  const lastFourNum = number.slice(-4);
+  const numberToDisplay = `**** **** **** ${lastFourNum}`;
 
   return (
-    <div className="flex gap-8 justify-center m-16">
-      {creditCards.map((cart, i) => {
-        return (
-          <div key={i}>
-            <div className="h-40 w-72 bg-yellow-500 rounded-2xl text-white flex flex-col items-start  ">
-              <p>hola</p>
-            </div>
-
-            <div className={cart.cssClass}>
-              <div className="flex justify-end">
-                <img src={cart.type} alt="logo" className="h-5 w-16" />
-              </div>
-              <p>{cart.number}</p>
-              <div className="flex">
-                <p>
-                  Expires {cart.expirationMonth}/{cart.expirationYear}
-                </p>
-                <p>{cart.bank}</p>
-              </div>
-              <p>{cart.owner}</p>
-            </div>
-          </div>
-        );
-      })}
+    <div
+      className={`h-[190px] w-[320px] rounded-2xl flex flex-col p-6 justify-between ${backGroundColor()}`}
+    >
+      <div className="flex justify-end">
+        <img src={type} alt="logo" className="h-5 w-16" />
+      </div>
+      <p className="text-[28px] tracking-wider text-center flex justify-center items-center">
+        {numberToDisplay}
+      </p>
+      <div>
+        <div className="flex gap-9">
+          <p>
+            Expires {expirationMonth}/{expirationYear}
+          </p>
+          <p>{bank}</p>
+        </div>
+        <p>{owner}</p>
+      </div>
     </div>
   );
 };

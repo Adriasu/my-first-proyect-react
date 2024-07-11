@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "type": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png",
+    "number": "5100172631206690",
+    "expirationMonth": 6,
+    "expirationYear": 40,
+    "bank": "Jaxspan",
+    "owner": "Taddeo Flewitt",
+    "cssClass": "green"
+  },
+  {
+    "id": 2,
+    "type":"https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg",
+    "number": "5100138911156012",
+    "expirationMonth": 8,
+    "expirationYear": 31,
+    "bank": "Gabvine",
+    "owner": "Perrine Besset",
+    "cssClass": "gray"
+  },
+  {
+    "id": 3,
+    "type": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png",
+    "number": "5100176523350565",
+    "expirationMonth": 10,
+    "expirationYear": 32,
+    "bank": "Rhyzio",
+    "owner": "Culver Mithan",
+    "cssClass": "gold"
+  }
+]
