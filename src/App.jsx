@@ -43,9 +43,8 @@ const App = () => {
       </div>
       <p className="m-auto p-10">EJERCICIO 3</p>
 
-      <div className="flex flex-wrap justify-center h-28">
-        <Button text={20}/>
-        <ButtonList number={10}/>
+      <div className="flex justify-center h-28">
+        <ButtonList number={20}/>
       </div>
 
 

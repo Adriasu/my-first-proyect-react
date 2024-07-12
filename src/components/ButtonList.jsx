@@ -1,47 +1,18 @@
-import React from 'react'
-import Button from './Button'
+import React from "react";
+import Button from "./Button";
 
-const ButtonList = ({number}) => {
-
-
-
-
-
-
-
-
+const ButtonList = ({ number }) => {
 
   return (
-    <div>
+    <div className="flex flex-wrap gap-3 w-[1200px]">
       {[...Array(number)].map((_, i) => {
-
-        return (
-
-
-
-
-
-
-
-
-
-
-        )
-
-
-
-
-
-      })
-      
-      
-      
-      }
-
-
-      
+        return <Button 
+        key={i} 
+        text={i + 1}
+        />;
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default ButtonList
+export default ButtonList;
