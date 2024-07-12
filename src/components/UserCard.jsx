@@ -1,25 +1,15 @@
 import React from "react";
 import Rating from "./Rating";
 
-const UserCard = () => {
-  const ejemplo = [
-    {
-      id: 1,
-      name: "Pascal Marshall",
-      rating: 3,
-      gender: "Male",
-      job: "Structural Analysis Engineer",
-      city: "Iowa City",
-    },
-  ];
-
+const UserCard = ({name, rating, gender, job, city}) => {
+ 
   return (
-    <div className="flex flex-col p-3 bg-[#455fb5] h-[150px] w-[300px] m-auto rounded-lg text-white">
-      <h1>{ejemplo[0].name}</h1>
-      <Rating number={ejemplo[0].rating} />
-      <p>{ejemplo[0].gender}</p>
-      <p>{ejemplo[0].job}</p>
-      <p>{ejemplo[0].city}</p>
+    <div className="flex flex-col justify-between p-5 bg-[#455fb5] h-[200px] w-[350px] m-auto rounded-lg text-white font-serif">
+      <h1 className="font-extrabold text-3xl">{name}</h1>
+      <Rating number={rating} />
+      <p>{gender}</p>
+      <p className="text-xl">{job}</p>
+      <p className="text-xl">{city}</p>
     </div>
   );
 };
