@@ -4,6 +4,9 @@ import dataCreditCard from "./data/dataCreditCart.json";
 import UserCard from "./components/UserCard";
 import dataUserCard from "./data/dataUserCard.json";
 import ButtonList from "./components/ButtonList";
+import WorldPopulation from "./components/WorldPopulation";
+import TitleWorldPopulation from "./components/TitleWorldPopulation";
+import dataGraphics from "./data/dataGraphics.json";
 
 const App = () => {
   return (
@@ -25,7 +28,9 @@ const App = () => {
           );
         })}
       </div>
+
       <p className="m-auto p-10">EJERCICIO 2</p>
+
       <div className="flex flex-wrap gap-3 m-6">
         {dataUserCard.map((user) => {
           return (
@@ -40,15 +45,30 @@ const App = () => {
           );
         })}
       </div>
+
       <p className="m-auto p-10">EJERCICIO 3</p>
 
-      <div className="flex justify-center h-28">
-        <ButtonList number={200}/>
+      <div className="flex justify-center">
+        <ButtonList number={20} />
       </div>
 
+      <p className="m-auto p-10">EJERCICIO 4</p>
 
-
-
+      <div className="flex flex-col">
+        <TitleWorldPopulation />
+        <div className="flex flex-col">
+          {dataGraphics.map((data, i) => {
+            return (
+              <WorldPopulation
+                key={i}
+                country={data.country.toLocaleUpperCase()}
+                population={data.population.toLocaleString("en")}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <p className="m-auto p-10">EJERCICIO 5</p>
     </div>
   );
 };
