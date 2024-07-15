@@ -1,6 +1,8 @@
 import React from "react";
 
+
 const WorldPopulation = ({ country, population }) => {
+
   return (
     <div className="flex m-auto w-[810px] justify-between">
       <div className="w-[100px]">
