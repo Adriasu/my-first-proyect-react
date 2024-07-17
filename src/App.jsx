@@ -62,7 +62,7 @@ const App = () => {
               <WorldPopulation
                 key={i}
                 country={data.country.toLocaleUpperCase()}
-                population={data.population.toLocaleString("en")}
+                population={data.population}
               />
             );
           })}
